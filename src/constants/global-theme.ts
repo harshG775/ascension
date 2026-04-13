@@ -24,20 +24,21 @@ export const RADIUS = {
 
 export const COLORS = {
     light: {
-        primary: "hsl(226 70% 55%)",
-        primaryForeground: "hsl(0 0% 100%)",
+        // Light mode version using the same brand lime but on white
+        primary: "hsl(75 100% 45%)",
+        primaryForeground: "hsl(0 0% 0%)",
 
         background: "hsl(0 0% 100%)",
-        foreground: "hsl(222 47% 11%)",
+        foreground: "hsl(0 0% 10%)",
 
-        card: "hsl(0 0% 99.2157%)",
+        card: "hsl(0 0% 96%)",
         cardForeground: "hsl(0 0% 0%)",
 
-        secondary: "hsl(226 64% 95%)",
-        secondaryForeground: "hsl(226 50% 30%)",
+        secondary: "hsl(180 100% 40%)", // Cyan
+        secondaryForeground: "hsl(0 0% 100%)",
 
-        muted: "hsl(226 40% 96%)",
-        mutedForeground: "hsl(226 30% 40%)",
+        muted: "hsl(0 0% 92%)",
+        mutedForeground: "hsl(0 0% 45%)",
 
         destructive: "hsl(0 84% 60%)",
         destructiveForeground: "hsl(0 0% 98%)",
@@ -48,35 +49,36 @@ export const COLORS = {
         success: "hsl(142 71% 45%)",
         successForeground: "hsl(0 0% 100%)",
 
-        border: "hsl(240 17.0732% 91.9608%)",
+        border: "hsl(0 0% 90%)",
     },
 
     dark: {
-        primary: "hsl(226 70% 65%)",
-        primaryForeground: "hsl(222 47% 10%)",
+        // Matches the screenshot exactly
+        primary: "hsl(75 100% 50%)", // Neon Lime (Start Workout Button)
+        primaryForeground: "hsl(0 0% 0%)",
 
-        background: "hsl(222 47% 5%)",
-        foreground: "hsl(0 0% 98%)",
+        background: "hsl(0 0% 0%)", // Pure Black background
+        foreground: "hsl(0 0% 100%)",
 
-        card: "hsl(228.0000 6.8493% 14.3137%)",
-        cardForeground: "hsl(0 0% 94.1176%)",
+        card: "hsl(0 0% 10%)", // Dark Charcoal cards (Streak/Target cards)
+        cardForeground: "hsl(0 0% 100%)",
 
-        secondary: "hsl(226 30% 20%)",
-        secondaryForeground: "hsl(226 70% 85%)",
+        secondary: "hsl(185 100% 50%)", // Cyan (Target/Progress accents)
+        secondaryForeground: "hsl(0 0% 0%)",
 
-        muted: "hsl(226 30% 15%)",
-        mutedForeground: "hsl(226 30% 80%)",
+        muted: "hsl(0 0% 15%)", // For unselected calendar days
+        mutedForeground: "hsl(0 0% 65%)", // For labels like "KCAL TO BURN"
 
-        destructive: "hsl(0 62% 48%)",
+        destructive: "hsl(0 70% 50%)",
         destructiveForeground: "hsl(0 0% 100%)",
 
         warning: "hsl(48 96% 53%)",
-        warningForeground: "hsl(222 47% 11%)",
+        warningForeground: "hsl(0 0% 0%)",
 
         success: "hsl(142 71% 45%)",
         successForeground: "hsl(0 0% 100%)",
 
-        border: "hsl(222.8571 6.4220% 21.3725%)",
+        border: "hsl(0 0% 18%)",
     },
 } as const;
 
