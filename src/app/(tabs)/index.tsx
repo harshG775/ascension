@@ -1,7 +1,8 @@
-import { useThemeModeContext } from "../components/contexts/theme-mode-provider";
-import { ThemedText } from "../components/core/themed-text";
-import { ThemedView } from "../components/core/themed-view";
-import Button from "../components/ui/button";
+import { Text } from "react-native";
+import { useThemeModeContext } from "../../components/contexts/theme-mode-provider";
+import { ThemedText } from "../../components/core/themed-text";
+import { ThemedView } from "../../components/core/themed-view";
+import Button from "../../components/ui/button";
 export default function Index() {
     const { mode, setMode } = useThemeModeContext();
     return (
@@ -18,6 +19,7 @@ export default function Index() {
             />
 
             <ThemedText style={{ marginTop: 40 }}>Current mode: {mode}</ThemedText>
+            <Text style={{ color: `${mode === "light" ? "red" : "green"}` }}>bittu</Text>
         </ThemedView>
     );
 }

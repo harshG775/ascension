@@ -1,9 +1,8 @@
-// theme-provider.tsx
-import { COLORS, RADIUS, SPACING } from "@/src/constants/global-theme";
 import { DefaultTheme, ThemeProvider as NavigationThemeProvider } from "@react-navigation/native";
 import { createContext, useContext, useMemo } from "react";
 import { ThemeMode, useThemeModeContext } from "./theme-mode-provider";
-
+import { COLORS, RADIUS, SPACING } from "@/src/constants/global-theme";
+import *as SystemUI from "expo-system-ui"
 type ThemeContextType = {
     colors: (typeof COLORS)[ThemeMode];
     radius: typeof RADIUS;
@@ -43,7 +42,7 @@ export function     ThemeProvider({ children }: ThemeProviderProps) {
         }),
         [mode],
     );
-
+SystemUI.setBackgroundColorAsync(COLORS[mode].background)
     return (
         <ThemeContext.Provider value={value}>
             <NavigationThemeProvider value={navTheme}>{children}</NavigationThemeProvider>

@@ -1,7 +1,7 @@
 // theme-mode-provider.tsx
-import { useColorScheme } from "@/src/hooks/use-color-scheme";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { createContext, useContext, useEffect, useState } from "react";
+import { useColorScheme } from "react-native";
 
 export type ThemeMode = "light" | "dark";
 

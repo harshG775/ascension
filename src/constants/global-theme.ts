@@ -24,53 +24,57 @@ export const RADIUS = {
 
 export const COLORS = {
     light: {
-        // Light mode version using the same brand lime but on white
-        primary: "hsl(75 100% 45%)",
-        primaryForeground: "hsl(0 0% 0%)",
+        // Softened the lime to be more readable on light backgrounds
+        primary: "hsl(76 75% 40%)",
+        primaryForeground: "hsl(0 0% 100%)",
 
-        background: "hsl(0 0% 100%)",
-        foreground: "hsl(0 0% 10%)",
+        // Off-white background reduces eye fatigue
+        background: "hsl(0 0% 99%)",
+        foreground: "hsl(240 10% 4%)",
 
-        card: "hsl(0 0% 96%)",
-        cardForeground: "hsl(0 0% 0%)",
+        // Subtle grey for cards to make them "pop" from the background
+        card: "hsl(0 0% 100%)",
+        cardForeground: "hsl(240 10% 4%)",
 
-        secondary: "hsl(180 100% 40%)", // Cyan
+        secondary: "hsl(187 80% 35%)", // Deepened Cyan
         secondaryForeground: "hsl(0 0% 100%)",
 
-        muted: "hsl(0 0% 92%)",
-        mutedForeground: "hsl(0 0% 45%)",
+        muted: "hsl(240 5% 96%)",
+        mutedForeground: "hsl(240 4% 45%)",
 
-        destructive: "hsl(0 84% 60%)",
+        destructive: "hsl(0, 100%, 50%)",
         destructiveForeground: "hsl(0 0% 98%)",
 
-        warning: "hsl(48 96% 53%)",
-        warningForeground: "hsl(222 47% 11%)",
+        warning: "hsl(38, 92%, 50%)",
+        warningForeground: "hsl(0 0% 0%)",
 
-        success: "hsl(142 71% 45%)",
+        success: "hsl(142 71% 35%)",
         successForeground: "hsl(0 0% 100%)",
 
-        border: "hsl(0 0% 90%)",
+        border: "hsl(240 6% 90%)",
     },
 
     dark: {
-        // Matches the screenshot exactly
-        primary: "hsl(75 100% 50%)", // Neon Lime (Start Workout Button)
+        // Neon Lime optimized for dark mode (slight glow effect)
+        primary: "hsl(75, 100%, 55%)",
         primaryForeground: "hsl(0 0% 0%)",
 
-        background: "hsl(0 0% 0%)", // Pure Black background
-        foreground: "hsl(0 0% 100%)",
+        // Not pure black, but a deep charcoal for better depth/shadows
+        background: "hsl(240 10% 4%)",
+        foreground: "hsl(0 0% 98%)",
 
-        card: "hsl(0 0% 10%)", // Dark Charcoal cards (Streak/Target cards)
-        cardForeground: "hsl(0 0% 100%)",
+        // Cards are slightly lighter than background to show elevation
+        card: "hsl(240 10% 8%)",
+        cardForeground: "hsl(0 0% 98%)",
 
-        secondary: "hsl(185 100% 50%)", // Cyan (Target/Progress accents)
+        secondary: "hsl(185 100% 45%)", // Vibrant Cyan
         secondaryForeground: "hsl(0 0% 0%)",
 
-        muted: "hsl(0 0% 15%)", // For unselected calendar days
-        mutedForeground: "hsl(0 0% 65%)", // For labels like "KCAL TO BURN"
+        muted: "hsl(240 5% 15%)",
+        mutedForeground: "hsl(240 5% 65%)",
 
-        destructive: "hsl(0 70% 50%)",
-        destructiveForeground: "hsl(0 0% 100%)",
+        destructive: "hsl(0, 100%, 50%)",
+        destructiveForeground: "hsl(0 0% 98%)",
 
         warning: "hsl(48 96% 53%)",
         warningForeground: "hsl(0 0% 0%)",
@@ -78,7 +82,7 @@ export const COLORS = {
         success: "hsl(142 71% 45%)",
         successForeground: "hsl(0 0% 100%)",
 
-        border: "hsl(0 0% 18%)",
+        border: "hsl(240 5% 18%)",
     },
 } as const;
 
