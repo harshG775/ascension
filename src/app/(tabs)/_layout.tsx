@@ -1,11 +1,11 @@
-import { Link, Tabs } from "expo-router";
-import React from "react";
 import Entypo from "@expo/vector-icons/Entypo";
-import Octicons from "@expo/vector-icons/Octicons";
+import Feather from "@expo/vector-icons/Feather";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
-import Feather from "@expo/vector-icons/Feather";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import Octicons from "@expo/vector-icons/Octicons";
+import { Link, Tabs } from "expo-router";
+import React from "react";
 import { useThemeContext } from "../../components/contexts/theme-provider";
 export default function Layout() {
     const { colors } = useThemeContext();
@@ -41,6 +41,7 @@ export default function Layout() {
             <Tabs.Screen
                 name="rank"
                 options={{
+                    headerShown: false,
                     tabBarIcon(props) {
                         return <FontAwesome6 name="ranking-star" size={props.size} color={props.color} />;
                     },
@@ -50,6 +51,7 @@ export default function Layout() {
             <Tabs.Screen
                 name="profile"
                 options={{
+                    headerShown: false,
                     tabBarIcon(props) {
                         return <Feather name="user" size={props.size} color={props.color} />;
                     },
