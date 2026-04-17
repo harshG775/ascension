@@ -23,6 +23,7 @@ export default function Layout() {
             <Tabs.Screen
                 name="body"
                 options={{
+                    headerShown: false,
                     tabBarIcon(props) {
                         return <Octicons name="pulse" size={props.size} color={props.color} />;
                     },
@@ -32,6 +33,7 @@ export default function Layout() {
             <Tabs.Screen
                 name="discover"
                 options={{
+                    headerShown: false,
                     tabBarIcon(props) {
                         return <FontAwesome5 name="search" size={props.size} color={props.color} />;
                     },
