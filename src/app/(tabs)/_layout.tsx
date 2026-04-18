@@ -14,6 +14,7 @@ export default function Layout() {
             <Tabs.Screen
                 name="index"
                 options={{
+                    headerShown: false,
                     tabBarIcon(props) {
                         return <Entypo name="home" size={props.size} color={props.color} />;
                     },

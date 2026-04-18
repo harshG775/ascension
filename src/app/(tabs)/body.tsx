@@ -49,13 +49,14 @@ const Body = () => {
 
     // Updated to use local image assets instead of external URIs
     const muscles = [
-        { id: "chest", name: "CHEST", image: require("../../assets/charts/front.jpeg") },
-        { id: "back", name: "BACK", image: require("../../assets/charts/front.jpeg") },
-        { id: "biceps", name: "BICEPS", image: require("../../assets/charts/front.jpeg") },
-        { id: "triceps", name: "TRICEPS", image: require("../../assets/charts/front.jpeg") },
-        { id: "shoulders", name: "SHOULDERS", image: require("../../assets/charts/front.jpeg") },
-        { id: "legs", name: "LEGS", image: require("../../assets/charts/front.jpeg") },
-        { id: "forearms", name: "FOREARMS", image: require("../../assets/charts/front.jpeg") },
+        { id: "chest", name: "CHEST", image: require("../../assets/charts/chest.jpeg") },
+        { id: "back", name: "BACK", image: require("../../assets/charts/back-muscles.jpeg") },
+        { id: "abs", name: "ABS", image: require("../../assets/charts/abs.jpeg") },
+        { id: "biceps", name: "BICEPS", image: require("../../assets/charts/biceps.jpeg") },
+        { id: "triceps", name: "TRICEPS", image: require("../../assets/charts/triceps.jpeg") },
+        { id: "shoulders", name: "SHOULDERS", image: require("../../assets/charts/shoulder.jpeg") },
+        { id: "legs", name: "LEGS", image: require("../../assets/charts/legs.jpeg") },
+        { id: "forearms", name: "FOREARMS", image: require("../../assets/charts/forearms.jpeg") },
     ];
 
     // --- Handlers ---
@@ -224,7 +225,7 @@ const getStyles = (colors: ThemeColors) =>
         // --- Image Viewer Styles ---
         imageViewerContainer: {
             marginHorizontal: 20,
-            height: 350,
+            height: 370,
             borderRadius: 24,
             overflow: "hidden",
             backgroundColor: colors.cardBackground,
@@ -276,13 +277,12 @@ const getStyles = (colors: ThemeColors) =>
             gap: 12,
         },
         muscleButton: {
+            width: "48%", // 👈 key line (2 columns)
             paddingVertical: 12,
             paddingHorizontal: 16,
             borderRadius: 12,
             justifyContent: "center",
             alignItems: "center",
-            marginBottom: 8,
-            marginRight: 8,
         },
         muscleButtonActive: {
             backgroundColor: colors.limeAccent,
