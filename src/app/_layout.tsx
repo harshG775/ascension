@@ -12,11 +12,10 @@ export default function RootLayout() {
                 <ThemeProvider>
                     <Stack>
                         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-                        <Stack.Screen
-                            name="settings"
-                            options={{ animation:"simple_push", animationDuration:10,  }}
-                        />
+                        <Stack.Screen name="settings" options={{ animation: "simple_push", animationDuration: 10 }} />
+                        <Stack.Screen name="workout/today" options={{ headerShown: false }} />
                     </Stack>
+
                     <StatusBar_ />
                 </ThemeProvider>
             </ThemeModeProvider>
